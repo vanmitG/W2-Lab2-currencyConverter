@@ -29,6 +29,22 @@ function usdToVnd(amountToConvert) {
 /************************************* */
 /*Convert vnd to usd and reverse END */
 /***************************************************** */
+
+/***************************************************** */
+/*Convert vnd to eur and reverse START */
+/************************************* */
+function vndToEur(amountToConvert) {
+  return amountToConvert / eurExchangeRate;
+}
+function eurToVnd(amountToConvert) {
+  return amountToConvert * eurExchangeRate;
+}
+
+// console.log("amountResult", amountResult);
+
+/************************************* */
+/*Convert vnd to eur and reverse END */
+
 function convertCurrency() {
   const amountToConvert = document.getElementById("amount").value;
   // console.log("amountToConvertamountToConvert", amountToConvert);
@@ -46,6 +62,13 @@ function convertCurrency() {
 
   if (fromCurrency === "usd" && toCurrency === "vnd") {
     amountResult = usdToVnd(amountToConvert);
+  }
+  if (fromCurrency === "vnd" && toCurrency === "eur") {
+    amountResult = vndToEur(amountToConvert);
+  }
+
+  if (fromCurrency === "eur" && toCurrency === "vnd") {
+    amountResult = eurToVnd(amountToConvert);
   }
 
   //printed result to screen
