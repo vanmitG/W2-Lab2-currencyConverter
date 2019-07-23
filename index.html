@@ -5,28 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Currency Converter</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <h1>Enter your amount to convert</h1>
+    <div class="container">
+      <div class="row"><h1>Enter your amount to convert</h1></div>
+      <div class="row">
+        <div class="col-6">
+          <select id="convertFrom" class="custom-select">
+            <option selected value="usd">USD</option>
+            <option value="eur">EUR</option>
+            <option value="vnd">VND</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <select id="convertTo" class="custom-select">
+            <option selected value="vnd">VND</option>
+            <option value="usd">USD</option>
+            <option value="eur">EUR</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-group mb-3 mt-3">
+          <input
+            id="amount"
+            type="number"
+            class="form-control"
+            placeholder="How much money do you have?"
+            aria-label="Recipient's username"
+            aria-describedby="basic-addon2"
+          />
+          <div class="input-group-append">
+            <button
+              id="convert"
+              onclick="convertCurrency()"
+              class="btn btn-outline-secondary"
+              type="button"
+            >
+              Convert
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row"><h3 id="convertedResult">result</h3></div>
+    </div>
 
-    <input id="amount" type="number" />
-    <select id="convertFrom">
-      <option value="">Convert from</option>
-      <option value="usd"> USD</option>
-      <option value="vnd">VND</option>
-      <option value="eur">EUR</option>
-    </select>
-    <select id="convertTo">
-      <option value="">Convert To</option>
-      <option value="vnd">VND</option>
-      <option value="usd">USD</option>
-      <option value="eur">EUR</option>
-    </select>
-    <button id="convert" onclick="convertCurrency()">Convert</button>
+    <button>Convert</button>
 
     <h3 id="convertedResult">result</h3>
 
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
     <script src="/js/script.js"></script>
   </body>
 </html>
