@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Enter your amount to convert</h1>
+
+    <input id="amount" type="number" />
+    <select id="convertFrom">
+      <option value="">Convert from</option>
+      <option value="usd"> USD</option>
+      <option value="vnd">VND</option>
+      <option value="eur">EUR</option>
+    </select>
+    <select id="convertTo">
+      <option value="">Convert To</option>
+      <option value="vnd">VND</option>
+      <option value="usd">USD</option>
+      <option value="eur">EUR</option>
+    </select>
+    <button id="convert" onclick="convertCurrency()">Convert</button>
+
+    <h3 id="convertedResult">result</h3>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
