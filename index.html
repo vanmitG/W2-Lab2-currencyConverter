@@ -14,54 +14,88 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <div class="container mt-5">
-      <div class="row rowCenter">
-        <h1 class="text-success">
-          Enter your amount to convert
-        </h1>
-      </div>
-      <div class="row rowCenter mt-3">
-        <div class="col-6">
-          <select id="convertFrom" class="custom-select">
-            <option selected value="usd">USD</option>
-            <option value="eur">EUR</option>
-            <option value="vnd">VND</option>
-          </select>
+    <div class="container boxCenter">
+      <div id="centerBox" class="centerBox">
+        <div class="row rowCenter">
+          <h1 class="textTitle" style="color:#ffffff">
+            Currency Converter
+          </h1>
         </div>
-        <div class="col-6 rowCenter">
-          <select id="convertTo" class="custom-select">
-            <option selected value="vnd">VND</option>
-            <option value="usd">USD</option>
-            <option value="eur">EUR</option>
-          </select>
+        <div class="row rowCenter mt-3">
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >From</span
+                >
+              </div>
+              <select
+                id="convertFrom"
+                class="custom-select text-success text-center font-weight-bold"
+              >
+                <option selected value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="CHF">CHF</option>
+                <option value="RUB">RUB</option>
+                <option value="CNY">CNY</option>
+                <option value="vnd">VND</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default"
+                  >To</span
+                >
+              </div>
+              <select
+                id="convertTo"
+                class="custom-select text-success text-center font-weight-bold"
+              >
+                <option selected value="vnd">VND</option>
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="AUD">AUD</option>
+                <option value="GBP">GBP</option>
+                <option value="JPY">JPY</option>
+                <option value="CHF">CHF</option>
+                <option value="RUB">RUB</option>
+                <option value="CNY">CNY</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row rowCenter mt-3">
+          <div class="input-group mb-3 mt-3">
+            <input
+              id="amount"
+              type="number"
+              class="form-control text-success"
+              placeholder="How much money do you have?"
+              aria-label="text-success"
+              aria-describedby="basic-addon2"
+              onchange="convertCurrency()"
+            />
+          </div>
+        </div>
+        <div class="row rowCenter">
+          <h4 id="convertedResult" class="text-center"></h4>
+        </div>
+        <div class="row rowCenter mt-3">
+          <button
+            id="convert"
+            onclick="convertCurrency()"
+            class="btn btn-outline-success btn-block"
+            type="button"
+          >
+            <strong>Click to Convert</strong>
+          </button>
         </div>
       </div>
-      <div class="row rowCenter mt-3">
-        <div class="input-group mb-3 mt-3">
-          <input
-            id="amount"
-            type="number"
-            class="form-control"
-            placeholder="How much money do you have?"
-            aria-label="Recipient's username"
-            aria-describedby="basic-addon2"
-          />
-          <div class="input-group-append"></div>
-        </div>
-      </div>
-      <div class="row rowCenter">
-        <h3 id="convertedResult" class="text-success"></h3>
-      </div>
-    </div>
-    <div class="row rowCenter mt-3">
-      <button
-        id="convert"
-        onclick="convertCurrency()"
-        class="btn btn-outline-success btn-block"
-        type="button"
-      >
-        Convert
-      </button>
     </div>
 
     <script

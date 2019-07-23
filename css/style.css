@@ -1,6 +1,80 @@
+/* font */
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap");
+/* Declare font:
+font-family: "Open Sans", sans-serif; 
+font-family: "Montserrat", sans-serif; */
+
+body {
+  background: linear-gradient(
+      135deg,
+      rgba(13, 54, 5, 0.8) 0%,
+      rgba(0, 0, 0, 0.3) 70%
+    ),
+    url("https://images.unsplash.com/photo-1521492210661-84a4913ceceb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80");
+
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+h4 {
+  font-family: "Montserrat", sans-serif;
+}
 .rowCenter {
   display: flex;
   justify-content: center;
-  width: 70%;
+  width: 68%;
   margin: 0 auto;
+}
+
+.boxCenter {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  min-height: 50%;
+  border: thin solid green;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(
+    to-right top,
+    rgba(1, 51, 3, 0.8) -20%,
+    rgba(18, 202, 25, 0.1) 60%
+  );
+  opacity: 0.8;
+}
+.centerBox:hover {
+  opacity: 1;
+  box-shadow: 0.125rem 0.125rem;
+}
+h1 .textTitle {
+  color: #ffffff;
+}
+
+#convert {
+  background-color: transparent;
+  color: #ffffff;
+  opacity: 0.6;
+}
+#convert:hover {
+  background-color: transparent;
+  color: green;
+  opacity: 1;
+}
+#convertedResult {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }

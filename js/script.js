@@ -76,6 +76,9 @@ function updateResults(from, to, conversionRate) {
   const convertedValue = conversionRate * value;
   console.log("superman", convertedValue);
   const formattedCurrency = currencyFormater(to.toUpperCase(), convertedValue);
+
+  document.getElementById("centerBox").style.height = "60%";
+
   document.getElementById("convertedResult").innerHTML = `${currencyFormater(
     from,
     value
